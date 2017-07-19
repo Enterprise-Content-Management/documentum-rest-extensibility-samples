@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ /**
+  ~  * Copyright (c) 2017. OpenText Corporation. All Rights Reserved.
+  ~  */
+  --><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.acme.rest</groupId>
+    <artifactId>acme-rest</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <properties>
+        <rest.homedir>${project.basedir}</rest.homedir>
+        <org.springframework.version>4.3.0.RELEASE</org.springframework.version>
+        <com.emc.documentum.rest.version>7.3.0040.0015</com.emc.documentum.rest.version>
+        <org.apache.maven.plugins.jar.version>2.3.2</org.apache.maven.plugins.jar.version>
+        <!-- TODO: update below test properties for unit testing -->
+        <test.docbroker.host>10.62.87.94</test.docbroker.host>
+        <test.docbroker.port>1489</test.docbroker.port>
+        <test.repository>ACME01</test.repository>
+        <test.username>dmadmin</test.username>
+        <test.password>password</test.password>
+    </properties>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>${maven.war.plugin.version}</version>
+                    <configuration>
+                        <archive>
+                            <manifestFile>${rest.homedir}/src/main/resources/META-INF/MANIFEST.MF</manifestFile>
+                        </archive>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.1</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>${org.apache.maven.plugins.jar.version}</version>
+                <configuration>
+                    <archive>
+                        <manifestFile>${rest.homedir}/src/main/resources/META-INF/MANIFEST.MF</manifestFile>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <!-- Set your local or central Maven artifactory to load Documentum REST artifacts, seeing sdk/maven-kit -->
+    <repositories>
+        <repository>
+            <id>emc-iig</id>
+            <name>EMC IIG Maven Repository</name>
+            <url>http://pls-jfrogrepo.lss.emc.com:8081/artifactory/internal</url>
+        </repository>
+    </repositories>
+  <modules>
+    <module>acme-rest-model</module>
+    <module>acme-rest-persistence</module>
+    <module>acme-rest-resource</module>
+    <module>acme-rest-web</module>
+  </modules>
+</project>

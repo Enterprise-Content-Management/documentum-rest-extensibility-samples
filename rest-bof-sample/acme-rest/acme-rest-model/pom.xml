@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2017. OpenText Corporation. All Rights Reserved.
+  --><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>acme-rest</artifactId>
+        <groupId>com.acme.rest</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>acme-rest-model</artifactId>
+    <properties>
+        <junit.version>4.12</junit.version>
+        <com.emc.documentum.rest.version>7.3.0040.0015</com.emc.documentum.rest.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.emc.documentum.rest</groupId>
+            <artifactId>documentum-rest-databinding</artifactId>
+            <version>${com.emc.documentum.rest.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.emc.documentum.rest</groupId>
+            <artifactId>documentum-rest-model</artifactId>
+            <version>${com.emc.documentum.rest.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>

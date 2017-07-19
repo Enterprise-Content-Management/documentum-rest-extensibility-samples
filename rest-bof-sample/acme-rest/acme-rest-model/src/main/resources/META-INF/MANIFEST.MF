@@ -1,0 +1,17 @@
+Specification-Title: documentum-rest-web
+Specification-Version: 16.3-SNAPSHOT
+Specification-Vendor: OpenText Corporation
+Implementation-Title: documentum-rest-web
+Implementation-Version: 16.3-SNAPSHOT
+Implementation-Vendor-Id: com.emc.documentum.rest
+Implementation-Vendor: OpenText Corporation
+mode: Integration-SNAPSHOT
+Title: Documentum REST Services
+Copyright: Copyright 2017 OpenText corporation.
+Version: 16.3.0.0
+Bundle-Version: 16.3.0.0
+Revision-Number: 27182818284
+Build-Date: 20170627.173719
+
+
+

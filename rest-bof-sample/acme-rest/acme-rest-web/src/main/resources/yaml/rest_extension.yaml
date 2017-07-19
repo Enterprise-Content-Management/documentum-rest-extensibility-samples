@@ -1,0 +1,28 @@
+#  # Copyright (c) 2017. OpenText Corporation. All Rights Reserved.
+#  # This file holds configurations for Documentum REST Services extensibility.
+
+---
+uri-template-registry:
+
+---
+root-service-registry:
+
+---
+resource-link-registry:
+  - resource:        repository
+    link-relation:   'name-cards'
+    target-resource: 'acme#name-cards'
+    value-mapping:   []
+
+---
+disabling-resource-registry:
+
+---
+override-resource-registry:
+
+---
+resource-view-registry:
+
+---
+media-type-registry:
+  - media-type: json
