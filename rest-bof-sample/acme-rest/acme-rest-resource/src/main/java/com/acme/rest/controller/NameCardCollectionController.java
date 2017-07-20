@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
@@ -34,6 +35,7 @@ import com.emc.documentum.rest.http.parameter.CollectionParam;
 import com.emc.documentum.rest.model.AtomFeed;
 import com.emc.documentum.rest.paging.PagedDataRetriever;
 import com.emc.documentum.rest.paging.PagedPersistentDataRetriever;
+import com.emc.documentum.rest.utils.CoreQueryParam;
 import com.emc.documentum.rest.view.ViewParams;
 import com.emc.documentum.rest.view.annotation.ResourceViewBinding;
 
@@ -89,10 +91,12 @@ public class NameCardCollectionController extends AbstractController {
     public NameCard create(
             @PathVariable("repositoryName") final String repositoryName,
             @RequestBody final NameCard nameCard,
+            @RequestParam(value = CoreQueryParam.CONTENT_COUNT, required = false, defaultValue = "0") final int contentCount,
             @RequestUri final UriInfo uriInfo) throws DfException {
         validateTargetControllerAccessible(NameCardController.class);
-        NameCard createdAliaSet = nameCardManager.create(nameCard);
+        nameCard.setSize(contentCount);
+        NameCard createdCard = nameCardManager.create(nameCard);
         Map<String, Object> others = Collections.singletonMap(ViewParams.POST_FROM_COLLECTION, (Object) true);
-        return getRenderedObject(repositoryName, createdAliaSet, true, uriInfo, others);
+        return getRenderedObject(repositoryName, createdCard, true, uriInfo, others);
     }
 }

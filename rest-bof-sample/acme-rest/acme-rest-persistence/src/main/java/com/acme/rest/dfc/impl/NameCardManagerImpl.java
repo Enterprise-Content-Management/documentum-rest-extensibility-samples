@@ -41,8 +41,6 @@ public class NameCardManagerImpl extends SessionAwareAbstractManager implements 
     @Autowired ContextSessionManager contextSessionManager;
 
     private static DfClientX CLIENT = new DfClientX();
-    private static final String BIO = "bio";
-    private static final String PHOTO = "photo";
 
     @Override public NameCard create(NameCard nameCard) throws DfException {
         File bio = null;
