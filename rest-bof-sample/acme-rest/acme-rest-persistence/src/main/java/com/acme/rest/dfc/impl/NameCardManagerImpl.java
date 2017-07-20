@@ -111,7 +111,7 @@ public class NameCardManagerImpl extends SessionAwareAbstractManager implements 
 
     private String validate(String name, NameCard nameCard) throws DfException {
         if (nameCard.getName() != null && !name.equals(nameCard.getName())) {
-            throw new RestClientErrorException("", new String[] {name}, HttpStatus.BAD_REQUEST, null);
+            throw new RestClientErrorException("E_NAME_CANNOT_BE_MODIFIED", new String[] {name}, HttpStatus.BAD_REQUEST, null);
         }
         return validate(name);
     }
@@ -119,7 +119,7 @@ public class NameCardManagerImpl extends SessionAwareAbstractManager implements 
     private String validate(String name) throws DfException {
         NameCard nameCard = getByName(name, new AttributeView("r_object_id", "i_chronicle_id"));
         if (nameCard == null) {
-            throw new RestClientErrorException("", new String[] {name}, HttpStatus.BAD_REQUEST, null);
+            throw new RestClientErrorException("E_NAME_NOT_EXIST", new String[] {name}, HttpStatus.BAD_REQUEST, null);
         }
         return (String) nameCard.getAttributeByName("i_chronicle_id");
     }

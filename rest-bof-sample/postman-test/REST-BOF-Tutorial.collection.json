@@ -270,7 +270,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"type\": \"name_card\",\n\t\"properties\": {\n\t\t\"object_name\": \"William Zhou\",\n\t\t\"title\": \"Consultant Software Engineer\"\n\t}\n}"
+					"raw": "{\n\t\"type\": \"name_card\",\n\t\"properties\": {\n\t\t\"object_name\": \"Beth Wiggins\",\n\t\t\"title\": \"Senior Sales Director\"\n\t}\n}"
 				},
 				"description": ""
 			},
@@ -338,13 +338,13 @@
 					"formdata": [
 						{
 							"key": "object",
-							"value": "{\n\t\"type\": \"name_card\",\n\t\"properties\": {\n\t\t\"object_name\": \"Jason Chen\",\n\t\t\"title\": \"Senior Manager\"\n\t}\n}",
+							"value": "{\n\t\"type\": \"name_card\",\n\t\"properties\": {\n\t\t\"object_name\": \"Emily Laurelia\",\n\t\t\"title\": \"Recruiter\"\n\t}\n}",
 							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "bio",
-							"value": "Jason Chen is working at ECD department of OpenText.",
+							"value": "Ms. Laurelia is working at HR department of ACME.",
 							"description": "",
 							"type": "text"
 						},
@@ -352,7 +352,7 @@
 							"key": "photo",
 							"description": "",
 							"type": "file",
-							"src": "rest team 2016.jpg"
+							"src": "Emily Laurelia.png"
 						}
 					]
 				},
@@ -593,7 +593,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"type\": \"name_card\",\n\t\"properties\": {\n\t\t\"object_name\": \"Wei Ruan5\",\n\t\t\"title\": \"Consultant Software Engineer\",\n\t\t\"contact_aspect.alias\": \"wruan\",\n\t\t\"contact_aspect.email\": \"wruan@opentext.com\",\n\t\t\"contact_aspect.company\": \"OpenText\",\n\t\t\"contact_aspect.department\": \"Documentum\",\n\t\t\"contact_aspect.office\": \"Shanghai\",\n\t\t\"organization_aspect.manager\": \"Jason Chen\"\n\t}\n}"
+					"raw": "{\n\t\"type\": \"name_card\",\n\t\"properties\": {\n\t\t\"object_name\": \"Jonas Lisson\",\n\t\t\"title\": \"Senior Software Engineer\",\n\t\t\"contact_aspect.alias\": \"jonasl\",\n\t\t\"contact_aspect.email\": \"jonasl@acme.com\",\n\t\t\"contact_aspect.company\": \"ACME\",\n\t\t\"contact_aspect.department\": \"Engineering\",\n\t\t\"contact_aspect.office\": \"London\",\n\t\t\"organization_aspect.manager\": \"Beth Wiggins\",\n\t\t\"organization_aspect.direct_reports\": []\n\t}\n}"
 				},
 				"description": ""
 			},
@@ -625,13 +625,13 @@
 					"formdata": [
 						{
 							"key": "object",
-							"value": "{\n\t\"type\": \"name_card\",\n\t\"properties\": {\n\t\t\"object_name\": \"Wei Ruan6\",\n\t\t\"title\": \"Consultant Software Engineer\",\n\t\t\"contact_aspect.alias\": \"wruan\",\n\t\t\"contact_aspect.email\": \"wruan@opentext.com\",\n\t\t\"contact_aspect.company\": \"OpenText\",\n\t\t\"contact_aspect.department\": \"Documentum\",\n\t\t\"contact_aspect.office\": \"Shanghai\",\n\t\t\"organization_aspect.manager\": \"Jason Chen\"\n\t}\n}",
+							"value": "{\n\t\"type\": \"name_card\",\n\t\"properties\": {\n\t\t\"object_name\": \"Cindy Baker\",\n\t\t\"title\": \"System Engineer\",\n\t\t\"contact_aspect.alias\": \"cindyb\",\n\t\t\"contact_aspect.email\": \"cindyb@acme.com\",\n\t\t\"contact_aspect.company\": \"ACME\",\n\t\t\"contact_aspect.department\": \"Marketing\",\n\t\t\"contact_aspect.office\": \"Shanghai\",\n\t\t\"organization_aspect.manager\": \"Beth Wiggins\"\n\t}\n}",
 							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "bio",
-							"value": "Wei Ruan is working at ECD department of OpenText.",
+							"value": "Ms. Baker is working at the marketing department of ACME.",
 							"description": "",
 							"type": "text"
 						},
