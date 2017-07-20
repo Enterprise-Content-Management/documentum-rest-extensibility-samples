@@ -1,0 +1,761 @@
+{
+	"variables": [],
+	"info": {
+		"name": "REST-BOF-Tutorial",
+		"_postman_id": "ff566ec6-2b5f-0e1a-8c78-6e9a857c8df8",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "a1. Get type name_card",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "{{username}}",
+						"password": "{{password}}",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}:{{port}}/dctm-rest/repositories/{{repository}}/types/name_card?inherited=false",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"dctm-rest",
+						"repositories",
+						"{{repository}}",
+						"types",
+						"name_card"
+					],
+					"query": [
+						{
+							"key": "inherited",
+							"value": "false",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.emc.documentum+json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZG1hZG1pbjpwYXNzd29yZA==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "object",
+							"value": "{\n\t\"type\": \"name_card\",\n\t\"properties\": {\n\t\t\"object_name\": \"Jason Chen\",\n\t\t\"title\": \"Senior Manager\"\n\t}\n}",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "content 1",
+							"value": "Jason Chen is working at ECD department of OpenText.",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "content 2",
+							"value": "",
+							"description": "",
+							"type": "file"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "a2. Get aspect type contact_aspect",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "{{username}}",
+						"password": "{{password}}",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "http://{{host}}:{{port}}/dctm-rest/repositories/{{repository}}/aspect-types/contact_aspect",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.emc.documentum+json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZG1hZG1pbjpwYXNzd29yZA==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "object",
+							"value": "{\n\t\"type\": \"name_card\",\n\t\"properties\": {\n\t\t\"object_name\": \"Jason Chen\",\n\t\t\"title\": \"Senior Manager\"\n\t}\n}",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "content 1",
+							"value": "Jason Chen is working at ECD department of OpenText.",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "content 2",
+							"value": "",
+							"description": "",
+							"type": "file"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "a3. Get aspect type organization_aspect",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "{{username}}",
+						"password": "{{password}}",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "http://{{host}}:{{port}}/dctm-rest/repositories/{{repository}}/aspect-types/organization_aspect",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.emc.documentum+json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZG1hZG1pbjpwYXNzd29yZA==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "object",
+							"value": "{\n\t\"type\": \"name_card\",\n\t\"properties\": {\n\t\t\"object_name\": \"Jason Chen\",\n\t\t\"title\": \"Senior Manager\"\n\t}\n}",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "content 1",
+							"value": "Jason Chen is working at ECD department of OpenText.",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "content 2",
+							"value": "",
+							"description": "",
+							"type": "file"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "a4. Get user home cabinet",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "{{username}}",
+						"password": "{{password}}",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "http://{{host}}:{{port}}/dctm-rest/repositories/{{repository}}/users/{{username}}/home",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.emc.documentum+json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZG1hZG1pbjpwYXNzd29yZA==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "object",
+							"value": "{\n\t\"type\": \"name_card\",\n\t\"properties\": {\n\t\t\"object_name\": \"Jason Chen\",\n\t\t\"title\": \"Senior Manager\"\n\t}\n}",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "content 1",
+							"value": "Jason Chen is working at ECD department of OpenText.",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "content 2",
+							"value": "",
+							"description": "",
+							"type": "file"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "b1. Create contentless name card",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "{{username}}",
+						"password": "{{password}}",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "http://{{host}}:{{port}}/dctm-rest/repositories/{{repository}}/folders/{{home_cabinet_id}}/documents",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.emc.documentum+json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZG1hZG1pbjpwYXNzd29yZA==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"type\": \"name_card\",\n\t\"properties\": {\n\t\t\"object_name\": \"William Zhou\",\n\t\t\"title\": \"Consultant Software Engineer\"\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "b2. Create contentful name card",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "{{username}}",
+						"password": "{{password}}",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}:{{port}}/dctm-rest/repositories/{{repository}}/folders/{{home_cabinet_id}}/documents?content-count=2&all-primary=false&format=text,png",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"dctm-rest",
+						"repositories",
+						"{{repository}}",
+						"folders",
+						"{{home_cabinet_id}}",
+						"documents"
+					],
+					"query": [
+						{
+							"key": "content-count",
+							"value": "2",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "all-primary",
+							"value": "false",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "format",
+							"value": "text,png",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZG1hZG1pbjpwYXNzd29yZA==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "object",
+							"value": "{\n\t\"type\": \"name_card\",\n\t\"properties\": {\n\t\t\"object_name\": \"Jason Chen\",\n\t\t\"title\": \"Senior Manager\"\n\t}\n}",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "bio",
+							"value": "Jason Chen is working at ECD department of OpenText.",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"description": "",
+							"type": "file",
+							"src": "rest team 2016.jpg"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "b3. Get all name cards",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "{{username}}",
+						"password": "{{password}}",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}:{{port}}/dctm-rest/repositories/{{repository}}/folders/{{home_cabinet_id}}/documents?object-type=name_card",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"dctm-rest",
+						"repositories",
+						"{{repository}}",
+						"folders",
+						"{{home_cabinet_id}}",
+						"documents"
+					],
+					"query": [
+						{
+							"key": "object-type",
+							"value": "name_card",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.emc.documentum+json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZG1hZG1pbjpwYXNzd29yZA==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "object",
+							"value": "{\n\t\"type\": \"name_card\",\n\t\"properties\": {\n\t\t\"object_name\": \"Jason Chen\",\n\t\t\"title\": \"Senior Manager\"\n\t}\n}",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "bio",
+							"value": "Jason Chen is working at ECD department of OpenText.",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"value": "",
+							"description": "",
+							"type": "file"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "c1. Get repository (observe link relation)",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "{{username}}",
+						"password": "{{password}}",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "http://{{host}}:{{port}}/dctm-rest/repositories/{{repository}}",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.emc.documentum+json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZG1hZG1pbjpwYXNzd29yZA==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "object",
+							"value": "{\n\t\"type\": \"name_card\",\n\t\"properties\": {\n\t\t\"object_name\": \"Jason Chen\",\n\t\t\"title\": \"Senior Manager\"\n\t}\n}",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "bio",
+							"value": "Jason Chen is working at ECD department of OpenText.",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"value": "",
+							"description": "",
+							"type": "file"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "c2. Get all name cards",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "{{username}}",
+						"password": "{{password}}",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}:{{port}}/dctm-rest/repositories/{{repository}}/name-cards?inline=true",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"dctm-rest",
+						"repositories",
+						"{{repository}}",
+						"name-cards"
+					],
+					"query": [
+						{
+							"key": "inline",
+							"value": "true",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.emc.documentum+json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZG1hZG1pbjpwYXNzd29yZA==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "object",
+							"value": "{\n\t\"type\": \"name_card\",\n\t\"properties\": {\n\t\t\"object_name\": \"Jason Chen\",\n\t\t\"title\": \"Senior Manager\"\n\t}\n}",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "bio",
+							"value": "Jason Chen is working at ECD department of OpenText.",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"value": "",
+							"description": "",
+							"type": "file"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "c3. Create contentless name card",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "{{username}}",
+						"password": "{{password}}",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "http://{{host}}:{{port}}/dctm-rest/repositories/{{repository}}/name-cards",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.emc.documentum+json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZG1hZG1pbjpwYXNzd29yZA==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"type\": \"name_card\",\n\t\"properties\": {\n\t\t\"object_name\": \"Wei Ruan5\",\n\t\t\"title\": \"Consultant Software Engineer\",\n\t\t\"contact_aspect.alias\": \"wruan\",\n\t\t\"contact_aspect.email\": \"wruan@opentext.com\",\n\t\t\"contact_aspect.company\": \"OpenText\",\n\t\t\"contact_aspect.department\": \"Documentum\",\n\t\t\"contact_aspect.office\": \"Shanghai\",\n\t\t\"organization_aspect.manager\": \"Jason Chen\"\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "c4. Create contentful name card",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "{{username}}",
+						"password": "{{password}}",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "http://{{host}}:{{port}}/dctm-rest/repositories/{{repository}}/name-cards",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZG1hZG1pbjpwYXNzd29yZA==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "object",
+							"value": "{\n\t\"type\": \"name_card\",\n\t\"properties\": {\n\t\t\"object_name\": \"Wei Ruan6\",\n\t\t\"title\": \"Consultant Software Engineer\",\n\t\t\"contact_aspect.alias\": \"wruan\",\n\t\t\"contact_aspect.email\": \"wruan@opentext.com\",\n\t\t\"contact_aspect.company\": \"OpenText\",\n\t\t\"contact_aspect.department\": \"Documentum\",\n\t\t\"contact_aspect.office\": \"Shanghai\",\n\t\t\"organization_aspect.manager\": \"Jason Chen\"\n\t}\n}",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "bio",
+							"value": "Wei Ruan is working at ECD department of OpenText.",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"value": "",
+							"description": "",
+							"type": "file"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "c5. Get name card",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "{{username}}",
+						"password": "{{password}}",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "http://{{host}}:{{port}}/dctm-rest/repositories/{{repository}}/name-cards/{{name}}",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZG1hZG1pbjpwYXNzd29yZA==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "object",
+							"value": "{\n\t\"type\": \"name_card\",\n\t\"properties\": {\n\t\t\"object_name\": \"Wei Ruan6\",\n\t\t\"title\": \"Consultant Software Engineer\",\n\t\t\"contact_aspect.alias\": \"wruan\",\n\t\t\"contact_aspect.email\": \"wruan@opentext.com\",\n\t\t\"contact_aspect.company\": \"OpenText\",\n\t\t\"contact_aspect.department\": \"Documentum\",\n\t\t\"contact_aspect.office\": \"Shanghai\",\n\t\t\"organization_aspect.manager\": \"Jason Chen\"\n\t}\n}",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "bio",
+							"value": "Wei Ruan is working at ECD department of OpenText.",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"value": "",
+							"description": "",
+							"type": "file"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "c6. Update name card",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "{{username}}",
+						"password": "{{password}}",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "http://{{host}}:{{port}}/dctm-rest/repositories/{{repository}}/name-cards/{{name}}",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZG1hZG1pbjpwYXNzd29yZA==",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.emc.documentum+json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"properties\": {\n\t\t\"title\": \"Consultant Software Engineer\",\n\t\t\"contact_aspect.alias\": \"wruan\",\n\t\t\"contact_aspect.email\": \"wruan@opentext.com\",\n\t\t\"contact_aspect.company\": \"OpenText\",\n\t\t\"contact_aspect.department\": \"Documentum\",\n\t\t\"contact_aspect.office\": \"Shanghai\",\n\t\t\"organization_aspect.manager\": \"Jason Chen\"\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "c7. Delete name card",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "{{username}}",
+						"password": "{{password}}",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "http://{{host}}:{{port}}/dctm-rest/repositories/{{repository}}/name-cards/{{name}}",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZG1hZG1pbjpwYXNzd29yZA==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
