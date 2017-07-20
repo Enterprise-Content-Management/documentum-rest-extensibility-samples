@@ -17,13 +17,8 @@
         <module>acme-bof-impl</module>
     </modules>
     <properties>
+        <!-- This project relies on DFC 7.3P04 library. Please install the library from REST 7.3 P04 SDK. -->
         <com.emc.documentum.dfc.version>7.3.0040.0025</com.emc.documentum.dfc.version>
     </properties>
-    <repositories>
-        <repository>
-            <id>emc-iig</id>
-            <name>EMC IIG Maven Repository</name>
-            <url>http://pls-jfrogrepo.lss.emc.com:8081/artifactory/internal</url>
-        </repository>
-    </repositories>
+    <!-- Set your local or central Maven artifactory to load Documentum REST artifacts, seeing sdk/maven-kit -->
 </project>

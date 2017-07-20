@@ -3,7 +3,9 @@
   ~ /**
   ~  * Copyright (c) 2017. OpenText Corporation. All Rights Reserved.
   ~  */
-  --><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  -->
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.acme.rest</groupId>
     <artifactId>acme-rest</artifactId>
@@ -13,6 +15,7 @@
     <properties>
         <rest.homedir>${project.basedir}</rest.homedir>
         <org.springframework.version>4.3.0.RELEASE</org.springframework.version>
+        <!-- This project relies on REST SDK 7.3 P04 library. Please install the library from REST 7.3 P04 SDK. -->
         <com.emc.documentum.rest.version>7.3.0040.0015</com.emc.documentum.rest.version>
         <org.apache.maven.plugins.jar.version>2.3.2</org.apache.maven.plugins.jar.version>
         <!-- TODO: update below test properties for unit testing -->
@@ -67,18 +70,11 @@
             </plugin>
         </plugins>
     </build>
+    <modules>
+        <module>acme-rest-model</module>
+        <module>acme-rest-persistence</module>
+        <module>acme-rest-resource</module>
+        <module>acme-rest-web</module>
+    </modules>
     <!-- Set your local or central Maven artifactory to load Documentum REST artifacts, seeing sdk/maven-kit -->
-    <repositories>
-        <repository>
-            <id>emc-iig</id>
-            <name>EMC IIG Maven Repository</name>
-            <url>http://pls-jfrogrepo.lss.emc.com:8081/artifactory/internal</url>
-        </repository>
-    </repositories>
-  <modules>
-    <module>acme-rest-model</module>
-    <module>acme-rest-persistence</module>
-    <module>acme-rest-resource</module>
-    <module>acme-rest-web</module>
-  </modules>
 </project>
